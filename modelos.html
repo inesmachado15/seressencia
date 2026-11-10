@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Modelos do site | Ser Essência</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="modelos.css">
+  <style>
+    .pick { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; max-width: 900px; margin: 0 auto; }
+    .pick a { display: flex; flex-direction: column; text-decoration: none; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; transition: transform .3s, box-shadow .3s; }
+    .pick a:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .pick img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+    .pick .body { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+    .pick .tag { font-size: .72rem; letter-spacing: .2em; text-transform: uppercase; color: var(--gold-dark); }
+    .pick h2 { font-size: 1.6rem; margin: 4px 0 8px; }
+    .pick p { color: var(--ink-soft); font-size: .93rem; }
+    .pick ul { margin: 0 0 18px; padding-left: 18px; color: var(--ink-soft); font-size: .9rem; }
+    .pick .go { margin-top: auto; font-weight: 500; color: var(--terra); }
+    .meter { display: flex; gap: 14px; font-size: .8rem; color: var(--ink-soft); margin-bottom: 14px; }
+    .meter b { color: var(--ink); font-weight: 500; }
+    @media (max-width: 900px) { .pick { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; } }
+  </style>
+</head>
+<body>
+  <main class="section">
+    <div class="container">
+      <div class="section-head center">
+        <span class="brand-name" style="font-size:2.4rem">Ser Essência</span>
+        <h1 style="font-size:clamp(1.9rem,3.6vw,2.6rem);margin-top:10px">Escolha o estilo do site</h1>
+        <p class="lead">Quatro propostas com o mesmo conteúdo, mas com formas diferentes de o mostrar. As fotografias são apenas exemplos.</p>
+      </div>
+
+      <div class="pick">
+        <a href="modelo-1-completo.html">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4b/Shiatsu.jpg/1280px-Shiatsu.jpg" alt="">
+          <div class="body">
+            <span class="tag">Modelo 1</span>
+            <h2>Completo</h2>
+            <div class="meter"><span>Texto <b>●●●</b></span><span>Imagens <b>●○○</b></span></div>
+            <p>Explica cada tratamento em detalhe. Ideal para quem nunca experimentou e tem dúvidas.</p>
+            <ul><li>Explicação completa dos 9 tratamentos</li><li>Como funciona, terapeuta e perguntas frequentes</li><li>Galeria do gabinete</li></ul>
+            <span class="go">Ver modelo →</span>
+          </div>
+        </a>
+        <a href="modelo-2-visual.html">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d9/YHI_Spa_treatment_room_at_Paradisus_by_Meli%C3%A1_Bali.jpg/1280px-YHI_Spa_treatment_room_at_Paradisus_by_Meli%C3%A1_Bali.jpg" alt="">
+          <div class="body">
+            <span class="tag">Modelo 2</span>
+            <h2>Visual</h2>
+            <div class="meter"><span>Texto <b>●●○</b></span><span>Imagens <b>●●●</b></span></div>
+            <p>Entra pelos olhos: fotografias grandes do espaço e de cada tratamento, com textos curtos.</p>
+            <ul><li>Foto em ecrã inteiro no topo</li><li>Cada tratamento com a sua fotografia</li><li>Mais fotografias do gabinete</li></ul>
+            <span class="go">Ver modelo →</span>
+          </div>
+        </a>
+        <a href="modelo-3-essencial.html">
+          <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6e/White_cup_with_green_tea_in_it.jpg/1280px-White_cup_with_green_tea_in_it.jpg" alt="">
+          <div class="body">
+            <span class="tag">Modelo 3</span>
+            <h2>Essencial</h2>
+            <div class="meter"><span>Texto <b>●○○</b></span><span>Imagens <b>●○○</b></span></div>
+            <p>Curto e direto: o que fazem, quanto custa e como marcar. Lê-se em menos de um minuto.</p>
+            <ul><li>Tratamentos numa linha cada</li><li>Preços logo a seguir</li><li>Contactos e WhatsApp</li></ul>
+            <span class="go">Ver modelo →</span>
+          </div>
+        </a>
+        <a href="modelo-4-natureza.html">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Herbal_medicine.jpg" alt="">
+          <div class="body">
+            <span class="tag">Modelo 4</span>
+            <h2>Natureza</h2>
+            <div class="meter"><span>Texto <b>●●●</b></span><span>Imagens <b>●●○</b></span></div>
+            <p>O conteúdo do Completo em tons de verde, salva e creme, com uma fotografia em cada tratamento.</p>
+            <ul><li>Cores calmas inspiradas na natureza</li><li>Cada tratamento com foto e explicação completa</li><li>Como funciona, terapeuta e perguntas frequentes</li></ul>
+            <span class="go">Ver modelo →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
