@@ -1,0 +1,243 @@
+/* Estilos extra para os 3 modelos de apresentação (usa ../css/styles.css como base) */
+
+/* ---------- Barra para trocar de modelo ---------- */
+.model-bar { background: #1d1612; color: #d9cdbf; font-size: 0.8rem; padding: 8px 0; }
+.model-bar .container { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: space-between; }
+.model-bar nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.model-bar a { color: #e9dfcf; text-decoration: none; padding: 4px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.15); }
+.model-bar a:hover { border-color: var(--gold); }
+.model-bar a.on { background: var(--gold); border-color: var(--gold); color: #1d1612; font-weight: 500; }
+.photo-credit { font-size: 0.75rem; opacity: 0.7; }
+
+/* ======================================================
+   MODELO 2 — VISUAL
+   ====================================================== */
+.v-hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  align-items: flex-end;
+  background: var(--ink);
+  overflow: hidden;
+}
+.v-hero > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.v-hero::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(43,33,28,.10) 0%, rgba(43,33,28,.35) 45%, rgba(43,33,28,.82) 100%);
+}
+.v-hero .container { position: relative; z-index: 1; padding-top: 120px; padding-bottom: 64px; }
+.v-hero h1 { color: #fff; max-width: 620px; }
+.v-hero h1 em { color: #f3c9b9; font-style: italic; font-weight: 500; }
+.v-hero p { color: #f1e7da; max-width: 500px; font-size: 1.05rem; margin-bottom: 26px; }
+.v-hero .eyebrow { color: #f3d9c9; }
+.v-hero .eyebrow::before { background: #f3d9c9; }
+.v-hero .btn-ghost { border-color: #fff; color: #fff; }
+.v-hero .btn-ghost:hover { background: #fff; color: var(--ink); }
+.v-hero .btn-primary { background: var(--paper); color: var(--ink); }
+.v-hero .btn-primary:hover { background: var(--gold); color: var(--ink); }
+
+.v-strip { display: grid; grid-template-columns: repeat(3, 1fr); }
+.v-strip a { position: relative; aspect-ratio: 4 / 3; overflow: hidden; color: #fff; text-decoration: none; }
+.v-strip img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease; }
+.v-strip a:hover img { transform: scale(1.06); }
+.v-strip a::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(43,33,28,.75)); }
+.v-strip span { position: absolute; z-index: 1; left: 22px; bottom: 18px; font-family: var(--font-serif); font-size: 1.5rem; font-weight: 600; }
+.v-strip small { display: block; font-family: var(--font-sans); font-size: 0.78rem; font-weight: 400; letter-spacing: .12em; text-transform: uppercase; opacity: .85; }
+
+.v-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.v-split .imgs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.v-split .imgs img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); }
+.v-split .imgs img:last-child { margin-top: 48px; }
+
+.v-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.v-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  transition: transform .3s, box-shadow .3s;
+}
+.v-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.v-card .v-img { aspect-ratio: 4 / 3; overflow: hidden; }
+.v-card .v-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s; }
+.v-card:hover .v-img img { transform: scale(1.05); }
+.v-card .v-body { padding: 18px 20px 22px; }
+.v-card h3 { font-size: 1.25rem; margin-bottom: 4px; }
+.v-card p { font-size: 0.92rem; color: var(--ink-soft); margin: 0; line-height: 1.55; }
+
+.v-banner { position: relative; min-height: 380px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
+.v-banner > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.v-banner::after { content: ""; position: absolute; inset: 0; background: rgba(43,33,28,.55); }
+.v-banner blockquote { position: relative; z-index: 1; margin: 0 20px; max-width: 760px; color: #fff; font-family: var(--font-serif); font-style: italic; font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.3; }
+.v-banner cite { display: block; margin-top: 14px; font-family: var(--font-sans); font-style: normal; font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; color: #f3d9c9; }
+
+.v-mosaic { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 190px; gap: 12px; }
+.v-mosaic img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+.v-mosaic img:first-child { grid-column: span 2; grid-row: span 2; }
+
+/* ======================================================
+   MODELO 3 — ESSENCIAL
+   ====================================================== */
+.e-section { padding: 56px 0; }
+
+/* Topo dividido: texto | foto */
+.e-split { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; background: var(--cream); }
+.e-split-text { display: flex; flex-direction: column; justify-content: center; padding: 56px max(20px, calc((100vw - var(--max)) / 2 + 20px)); padding-right: 48px; }
+.e-split-text h1 { font-size: clamp(2rem, 3.6vw, 2.9rem); }
+.e-split-text h1 em { color: var(--terra); font-weight: 500; }
+.e-split-text .lead { margin-bottom: 24px; max-width: 460px; }
+.e-split-img { position: relative; min-height: 320px; }
+.e-split-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+
+/* Faixa terracota com destaques */
+.e-band { background: var(--terra); color: #f6e4da; padding: 22px 0; }
+.e-band .container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.e-band div div, .e-band .container > div { font-size: .88rem; line-height: 1.4; }
+.e-band strong { display: block; font-family: var(--font-serif); font-size: 1.25rem; font-weight: 600; color: #fff; }
+.e-band .container > div + div { border-left: 1px solid rgba(255,255,255,.3); padding-left: 20px; }
+
+.e-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
+.e-head h2 { margin: 0; }
+.e-head p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
+
+/* Tratamentos: grelha 3x3 de cartões com ícone */
+.e-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.e-card { display: flex; gap: 14px; align-items: flex-start; background: var(--white); border: 1px solid var(--line); border-radius: 14px; padding: 18px; transition: border-color .2s, box-shadow .2s; }
+.e-card:hover { border-color: var(--gold); box-shadow: var(--shadow); }
+.e-card .icon { flex: none; width: 40px; height: 40px; }
+.e-card .icon svg { width: 20px; height: 20px; }
+.e-card h3 { font-size: 1.1rem; margin: 0 0 2px; }
+.e-card p { margin: 0; font-size: .88rem; line-height: 1.5; color: var(--ink-soft); }
+
+/* Contactos: info | foto */
+.e-contact-sec { display: grid; grid-template-columns: 1fr 1fr; background: var(--ink); color: var(--paper); }
+.e-contact-info { padding: 56px 48px 56px max(20px, calc((100vw - var(--max)) / 2 + 20px)); }
+.e-contact-info .contact-list small { display: block; font-size: 0.72rem; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+.e-contact-info .contact-list { gap: 14px; margin-bottom: 24px; }
+.e-contact-info .btn-ghost { border-color: var(--paper); color: var(--paper); }
+.e-contact-info .btn-ghost:hover { background: var(--paper); color: var(--ink); }
+
+.e-header-actions { display: flex; align-items: center; gap: 18px; }
+.e-header-actions a.tel { text-decoration: none; font-size: .92rem; color: var(--ink-soft); }
+.e-header-actions .btn { white-space: nowrap; padding: 10px 16px; font-size: .85rem; }
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 1000px) {
+  .v-cards { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 860px) {
+  .v-hero { min-height: 70vh; }
+  .v-strip { grid-template-columns: 1fr; }
+  .v-strip a { aspect-ratio: 16 / 9; }
+  .v-split { grid-template-columns: 1fr; gap: 36px; }
+  .v-mosaic { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+  .e-header-actions a.tel { display: none; }
+  .e-split, .e-contact-sec { grid-template-columns: 1fr; }
+  .e-split-img { min-height: 260px; }
+  .e-split .e-split-img { order: -1; }
+  .e-split-text, .e-contact-info { padding: 40px 20px; }
+  .e-grid { grid-template-columns: repeat(2, 1fr); }
+  .e-grid .e-card:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 620px) {
+  .v-cards, .e-grid { grid-template-columns: 1fr; }
+  .e-band .container { grid-template-columns: 1fr; gap: 10px; }
+  .e-band .container > div + div { border-left: 0; padding-left: 0; }
+  .model-bar .container > span { display: none; }
+  .model-bar nav { gap: 4px; }
+  .model-bar a { font-size: .72rem; padding: 3px 8px; }
+  .e-header .brand-sub { display: none; }
+}
+
+/* ---------- Fotos a passar (modelo 3) ---------- */
+.slideshow { overflow: hidden; background: var(--sand); }
+.slideshow .slide { position: absolute; inset: 0; margin: 0; opacity: 0; transition: opacity 1.2s ease; }
+.slideshow .slide.on { opacity: 1; }
+.slideshow figcaption {
+  position: absolute; left: 16px; bottom: 16px;
+  padding: 4px 11px; border-radius: 999px;
+  background: rgba(43, 33, 28, 0.6); color: #fff;
+  font-size: 0.72rem; letter-spacing: 0.06em;
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+}
+.slideshow .dots { position: absolute; right: 16px; bottom: 20px; display: flex; gap: 6px; z-index: 1; }
+.slideshow .dots button { width: 8px; height: 8px; padding: 0; border: 0; border-radius: 50%; background: rgba(255,255,255,.55); cursor: pointer; transition: background .3s, transform .3s; }
+.slideshow .dots button.on { background: #fff; transform: scale(1.25); }
+.slideshow .arrow {
+  position: absolute; top: 50%; z-index: 2;
+  width: 44px; height: 44px; margin-top: -22px;
+  display: flex; align-items: center; justify-content: center;
+  border: 0; border-radius: 50%; padding: 0; cursor: pointer;
+  background: rgba(251, 248, 243, 0.85); color: var(--ink);
+  box-shadow: 0 6px 18px -8px rgba(0,0,0,.4);
+  transition: background .2s, transform .2s;
+}
+.slideshow .arrow:hover { background: #fff; transform: scale(1.08); }
+.slideshow .arrow svg { width: 20px; height: 20px; }
+.slideshow .arrow.prev { left: 16px; }
+.slideshow .arrow.next { right: 16px; }
+
+/* ======================================================
+   MODELO 4 — NATUREZA (conteúdo do Completo, cores verdes,
+   tratamentos com fotografia)
+   ====================================================== */
+.m-natureza {
+  --paper: #f5f4ec;
+  --cream: #e8eedf;
+  --sand: #d9e2cc;
+  --ink: #24352a;
+  --ink-soft: #55655a;
+  --gold: #a3925a;
+  --gold-dark: #74693a;
+  --terra: #5e7f4e;
+  --terra-soft: #dde8d0;
+  --line: #d3dcc6;
+  --shadow: 0 18px 40px -24px rgba(36, 53, 42, 0.4);
+}
+.m-natureza .model-bar { background: #16211a; color: #c9d6c6; }
+.m-natureza .model-bar a { color: #e3ecdd; }
+.m-natureza .model-bar a.on { color: #16211a; }
+.m-natureza .site-header { background: rgba(245, 244, 236, 0.92); }
+.m-natureza .hero::before { background: radial-gradient(circle, var(--terra-soft) 0%, rgba(221,232,208,0) 70%); }
+.m-natureza .photo { background: linear-gradient(135deg, rgba(94,127,78,.2), rgba(163,146,90,.2)), var(--cream); }
+
+/* Fundos com folhas muito suaves */
+.m-natureza .bg-cream,
+.m-natureza .about,
+.m-natureza .prices {
+  background-color: var(--cream);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220' viewBox='0 0 220 220'%3E%3Cg fill='none' stroke='%235e7f4e' stroke-opacity='.10' stroke-width='1.4' stroke-linecap='round'%3E%3Cpath d='M30 70c20-30 55-35 70-30-5 25-35 50-70 30z'/%3E%3Cpath d='M30 70 100 40'/%3E%3Cpath d='M150 170c10-28 40-40 55-38-2 22-27 46-55 38z'/%3E%3Cpath d='M150 170l55-38'/%3E%3Cpath d='M120 110c-8-16-2-34 6-40 9 12 8 32-6 40z'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(ellipse at 0% 0%, rgba(255,255,255,.55), rgba(255,255,255,0) 55%);
+  background-size: 220px 220px, 100% 100%;
+}
+
+/* Como funciona: verde musgo */
+.m-natureza .steps-section .eyebrow,
+.m-natureza .step::before { color: #e2edd5; }
+.m-natureza .steps-section .eyebrow::before,
+.m-natureza .steps-section .eyebrow::after { background: #e2edd5; }
+.m-natureza .steps-section .lead,
+.m-natureza .step p { color: #eef4e6; }
+
+/* Contactos e rodapé: verde floresta */
+.m-natureza .contact .lead,
+.m-natureza .map p { color: #cddacb; }
+.m-natureza .map { background: #2f4335; }
+.m-natureza .site-footer { background: #18241c; color: #a9b9a8; }
+
+/* Tratamentos com fotografia */
+.m-natureza .treatment { padding: 0 0 24px; overflow: hidden; background: var(--white); }
+.m-natureza .t-img { aspect-ratio: 16 / 10; overflow: hidden; background: var(--sand); }
+.m-natureza .t-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+.m-natureza .treatment:hover .t-img img { transform: scale(1.05); }
+.m-natureza .treatment > :not(.t-img) { margin-left: 24px; margin-right: 24px; }
+.m-natureza .treatment-top { position: relative; z-index: 1; margin-top: -22px; align-items: flex-end; }
+.m-natureza .treatment .icon { border: 3px solid var(--white); width: 50px; height: 50px; }
+.m-natureza .treatment:target { box-shadow: 0 0 0 3px rgba(94,127,78,.3); }
+@media (max-width: 620px) {
+  .m-natureza .treatment > :not(.t-img) { margin-left: 20px; margin-right: 20px; }
+}
+.m-natureza .hero { background: linear-gradient(160deg, #e6eddb 0%, #f1f3e8 55%, var(--paper) 100%); }
