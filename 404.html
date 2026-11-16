@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Página não encontrada · Ser Essência</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" data-asset-href>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0}
+  body{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;
+    font-family:Jost,system-ui,sans-serif;color:#f4ede2;background:#2b211c;
+    background:radial-gradient(circle at 75% 45%,#4a3829 0,#2b211c 60%)}
+  .card{max-width:480px;width:100%;text-align:center}
+  .mark{width:84px;height:84px;margin:0 auto 10px;display:block}
+  .name{font-family:"Great Vibes",cursive;font-size:3rem;color:#b08d57;line-height:1.1}
+  .tag{letter-spacing:.22em;text-transform:uppercase;font-size:.72rem;color:#d6c8b4;margin-bottom:34px}
+  .eyebrow{color:#b08d57;letter-spacing:.2em;text-transform:uppercase;font-size:.78rem;font-weight:500}
+  h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(2rem,6vw,2.7rem);margin:.35rem 0 .8rem}
+  p{color:rgba(244,237,226,.85);line-height:1.65;margin-bottom:1.6rem;font-weight:300}
+  .btns{display:flex;gap:.7rem;justify-content:center;flex-wrap:wrap}
+  a.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;font-weight:500;text-decoration:none;background:#b08d57;color:#2b211c}
+  a.btn.ghost{background:transparent;color:#f4ede2;border:1.5px solid rgba(244,237,226,.55)}
+</style>
+</head>
+<body>
+<main class="card">
+  <a href="/" data-home aria-label="Ser Essência, página inicial">
+    <svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="#b08d57" stroke-width="2"><path d="M24 12c6 0 10 4.5 10 10.5 0 6.5-5 11.5-10 11.5s-10-5-10-11.5C14 16.5 18 12 24 12z"/><path d="M24 17.5c3.3 0 5.5 2.4 5.5 5.3 0 3.4-2.6 5.7-5.5 5.7s-5.5-2.3-5.5-5.7"/></g></svg>
+  </a>
+  <div class="name">Ser Essência</div>
+  <div class="tag">Medicina Tradicional Chinesa</div>
+  <p class="eyebrow">Erro 404</p>
+  <h1>Esta página não existe</h1>
+  <p>O endereço pode estar errado ou a página pode ter mudado de sítio. Volte ao início ou marque a sua consulta pelo WhatsApp.</p>
+  <div class="btns">
+    <a class="btn" href="/" data-home>Voltar ao início</a>
+    <a class="btn ghost" href="https://wa.me/351914245622">WhatsApp 914 245 622</a>
+  </div>
+</main>
+<script>
+  // No protótipo (github.io/seressencia/) o site está numa subpasta.
+  (function () {
+    var base = location.pathname.indexOf('/seressencia/') === 0 ? '/seressencia/' : '/';
+    if (base === '/') return;
+    document.querySelectorAll('[data-home]').forEach(function (a) { a.href = base; });
+    var ic = document.querySelector('[data-asset-href]'); if (ic) ic.href = base + 'favicon.svg';
+  })();
+</script>
+</body>
+</html>
